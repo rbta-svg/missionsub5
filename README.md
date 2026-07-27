@@ -85,12 +85,21 @@ raw/                    FIT files and TrainingPeaks exports — gitignored
 
 ## The short version
 
-Three levers decide the race, and only one is training:
+| Leg | Target | 2025 |
+|---|---|---|
+| Swim 1.9 km | 38:00 | 40:06 |
+| T1 | 5:45 | 6:01 |
+| Bike 90 km | 2:33:55 | 2:40:02 |
+| T2 | 5:10 | 5:45 |
+| Run 21.1 km | 1:36:55 | 1:51:00 |
+| **Total** | **4:59:45** | 5:22:59 |
 
-1. **Run** — 10 minutes. Long run to 21 km, race-pace finishes. She ran 4:26/km off the bike at Karlsfelder in July.
-2. **Bike** — 7 minutes. Aero helmet, bike fit, and time spent in the bars. Bought, not trained.
-3. **Transitions** — 2 to 3 minutes. Cervia's transitions are structurally slow; the winner took 8:00. Drill them anyway.
+Three levers decide it, and only one is training:
 
-The swim is at maintenance. It has been flat since May and six weeks will not move it.
+1. **Run** — 14 minutes. Long run to 21 km with race-pace finishes. She ran 4:26/km off the bike at Karlsfelder in July.
+2. **Bike** — 6 minutes. **Skinsuit, aero helmet, bike fit.** Bought, not trained, and all three needed by late August. The skinsuit alone is worth 2:23.
+3. **Transitions** — about a minute. Cervia's are structurally slow; the winner took 8:00. Drill them, but don't build the plan on them.
 
-**Her power meter reads nonsense** — 89 W recorded during a 35 km/h race. All bike pacing is written in heart rate: 152-158 on race day.
+The swim is at maintenance — flat since May, and six weeks will not move it. The two minutes there come from sighting, not fitness.
+
+**Her power meter reads nonsense** — 89 W recorded during a 35 km/h race. All bike pacing is written in heart rate: **155-160** on race day.

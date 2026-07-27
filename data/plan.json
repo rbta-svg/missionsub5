@@ -15,31 +15,31 @@
    },
    {
     "leg": "T1",
-    "time": "4:45",
+    "time": "5:45",
     "note": "Long run in from the beach. Walked yesterday, so no hesitation."
    },
    {
     "leg": "Bike 90 km",
-    "time": "2:36:30",
-    "note": "34.5 km/h, HR 155-160. In the bars. Do not chase Bertinoro."
+    "time": "2:33:55",
+    "note": "35.1 km/h at HR 155-160. The speed comes from the skinsuit and helmet, not from working harder."
    },
    {
     "leg": "T2",
-    "time": "3:30",
-    "note": "Shoes, hat, go."
+    "time": "5:10",
+    "note": "Helmet off, shoes on, go."
    },
    {
     "leg": "Run 21.1 km",
-    "time": "1:37:00",
-    "note": "4:40/km for 3 km, then 4:36/km. This is where sub-5 is won."
+    "time": "1:36:55",
+    "note": "4:40/km for 3 km, then 4:35/km. This is where sub-5 is won."
    }
   ],
   "what_must_be_true": [
-   "Run 4:36/km for 21.1 km off the bike. She ran 4:26/km for 9.8 km off a 45 km bike at Karlsfelder — this asks for 10 s/km slower over double the distance.",
-   "Bike 34.5 km/h at HR 155-160, which is below the 168 she held at Karlsfelder.",
-   "Transitions 8:15 combined on a course where the winner took 8:00. She did 4:36 at Karlsfelder.",
-   "Swim straight. 2:00/100m is her real open-water pace; swimming wide is what costs the minute.",
-   "Aero helmet and bike fit both done by late August."
+   "Skinsuit, aero helmet and bike fit ALL done by late August. The skinsuit alone is worth 2:23 — it is no longer optional.",
+   "Run 4:35/km for 21.1 km off the bike. She ran 4:26/km for 9.8 km off a 45 km bike at Karlsfelder — this asks for 9 s/km slower over double the distance.",
+   "Bike 35.1 km/h at HR 155-160, below the 168 she held at Karlsfelder. Same effort as before; the aero kit does the work.",
+   "Transitions 10:55 combined. Slower than planned, and already priced in.",
+   "Swim straight. 2:00/100m is her real open-water pace; swimming wide is what costs the minute."
   ]
  },
  "priorities": {
@@ -239,7 +239,7 @@
      "title": "Long run 16 km",
      "priority": "A",
      "duration": "1:40",
-     "detail": "12 km easy, then 4 km at 4:36/km."
+     "detail": "12 km easy, then 4 km at 4:35/km."
     }
    ]
   },
@@ -355,7 +355,7 @@
      "title": "Long run 18 km",
      "priority": "A",
      "duration": "1:55",
-     "detail": "13 km easy, then 5 km at 4:36/km."
+     "detail": "13 km easy, then 5 km at 4:35/km."
     }
    ]
   },
@@ -368,7 +368,7 @@
      "title": "2 h bike + 20 min run",
      "priority": "A",
      "duration": "2:30",
-     "detail": "2 h ride, 90 min continuous in the bars at HR 152-158. Then a FULL timed T2: helmet off, shoes changed, running — target under 2 min. Then 20 min at 4:36/km."
+     "detail": "2 h ride, 90 min continuous in the bars at HR 152-158. Then a FULL timed T2: helmet off, shoes changed, running — target under 2 min. Then 20 min at 4:35/km."
     }
    ]
   },
@@ -565,7 +565,7 @@
      "title": "Long run 21 km",
      "priority": "A",
      "duration": "2:10",
-     "detail": "Longest run of the plan. 15 km steady, then 6 km at 4:36/km. Eat on the run — this is the race-day rehearsal for the run leg."
+     "detail": "Longest run of the plan. 15 km steady, then 6 km at 4:35/km. Eat on the run — this is the race-day rehearsal for the run leg."
     }
    ]
   },
@@ -578,7 +578,7 @@
      "title": "Full rehearsal",
      "priority": "A",
      "duration": "3:30",
-     "detail": "1 km swim + 2:30 bike + 40 min run. Race kit, race nutrition, clock running. Time both transitions. Bike at HR 155-160 in the bars. Run 40 min at 4:36/km — longer than before, because the run is now the target."
+     "detail": "1 km swim + 2:30 bike + 40 min run. Race kit, race nutrition, clock running. Time both transitions. Bike at HR 155-160 in the bars. Run 40 min at 4:35/km — longer than before, because the run is now the target."
     }
    ]
   },
@@ -670,7 +670,7 @@
      "title": "Long run 17 km",
      "priority": "A",
      "duration": "1:45",
-     "detail": "11 km easy, then 6 km at 4:36/km. Last quality long run."
+     "detail": "11 km easy, then 6 km at 4:35/km. Last quality long run."
     }
    ]
   },

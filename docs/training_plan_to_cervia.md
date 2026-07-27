@@ -2,9 +2,11 @@
 
 *Written 27 July 2026. Plan proper starts Monday 3 August: six build weeks plus race week.*
 
-**Target: 4:59:45. Bike 2:36:30 at heart rate 155-160. Run 4:36/km.**
+**Target: 4:59:45. Bike 2:33:55 at heart rate 155-160. Run 4:35/km.**
 
-> **v5 — what changed.** Target sharpened to **4:59:45** — sub-5. The time comes mostly from the run: race-pace volume inside the long runs roughly doubled, interval pace dropped to 4:28/km, and both bricks now end with a timed T2 under two minutes. Bike moves only marginally, to HR 155-160.
+> **v6 — what changed.** Transitions set to realistic times (T1 5:45, T2 5:10). The 2:40 that costs is paid almost entirely by adding a **skinsuit** — 2:23 for the same watts — so the bike gets faster without getting harder. Run moves 4:36 → 4:35/km.
+>
+> **v5.** Target sharpened to **4:59:45** — sub-5. The time comes mostly from the run: race-pace volume inside the long runs roughly doubled, interval pace dropped to 4:28/km, and both bricks now end with a timed T2 under two minutes. Bike moves only marginally, to HR 155-160.
 
 ---
 
@@ -37,7 +39,7 @@ Three to four runs a week. Two swims. Two to three rides.
 1. **Every ride over an hour goes in the aero bars.** The position is new and needs to ache in August, not on race day.
 2. **The long run never gets moved.**
 
-**Effort by *RPE* out of 10 and by heart rate.** Easy = 4-5. Steady = 5-6. Tempo = 6-7. **Bike race effort = HR 155-160, RPE 6.** Run race effort = 4:36/km.
+**Effort by *RPE* out of 10 and by heart rate.** Easy = 4-5. Steady = 5-6. Tempo = 6-7. **Bike race effort = HR 155-160, RPE 6.** Run race effort = 4:35/km.
 
 **How to read a swim set.** "6 × 200" means swim 200 metres, rest, and repeat six times. Rest between each is written next to it. Everything else is spelled out in sentences.
 
@@ -89,8 +91,8 @@ RPE 5. **45 minutes continuous in the bars**, then sit up for the rest. Cadence 
 > **Main set.** 6 × 200 m at the pace her Monday test gave her. 30 seconds rest after each.
 > **Cool-down.** 200 m easy with the *pull buoy* between her thighs.
 
-**Sat 08.08 — Long run: 16 km, last 3 at race effort (A)** (1:40)
-13 km easy, then **3 km at 4:36/km.**
+**Sat 08.08 — Long run: 16 km, last 4 at race effort (A)** (1:40)
+12 km easy, then **4 km at 4:35/km.**
 
 **Sun 09.08 — Bike: 2:30 easy (A)** (2:30)
 RPE 5, **two blocks of 30 minutes in the bars.** Eat every 45 minutes.
@@ -124,12 +126,12 @@ RPE 5, **two blocks of 30 minutes in the bars.** Eat every 45 minutes.
 > **Nothing on.** 4 × 100 m easy freestyle with no toys at all — the point is to carry the feeling from the paddles across into normal swimming.
 > **Cool-down.** 200 m easy.
 
-**Sat 15.08 — Long run: 18 km, last 3 at race effort (A)** (1:55)
-15 km easy, then **3 km at 4:36/km.**
+**Sat 15.08 — Long run: 18 km, last 5 at race effort (A)** (1:55)
+13 km easy, then **5 km at 4:35/km.**
 
 **Sun 16.08 — Brick: 2 h bike + 20 min run (A)** (2:30)
 2 h ride, **90 minutes continuous in the bars**, heart rate 152-158.
-Then a **full timed T2** — helmet off, shoes changed, running, under 2 minutes. Then 20 minutes at 4:36/km.
+Then a **full timed T2** — helmet off, shoes changed, running, under 2 minutes. Then 20 minutes at 4:35/km.
 
 ---
 
@@ -186,11 +188,11 @@ A lake or the sea if she can get to one, wetsuit on. Practise starting from the 
 *Pool alternative:* 300 m warm-up · 6 × 200 m steady, lifting the eyes forward every 6 strokes · 300 m easy.
 
 **Sat 29.08 — Long run: 21 km (A)** (2:10)
-The longest run of the plan. 15 km steady, then **6 km at 4:36/km.** Eat on the run — this is the rehearsal for the run leg.
+The longest run of the plan. 15 km steady, then **6 km at 4:35/km.** Eat on the run — this is the rehearsal for the run leg.
 
-**Sun 30.08 — Full rehearsal: 1 km swim + 2:30 bike + 30 min run (A)** (3:30)
+**Sun 30.08 — Full rehearsal: 1 km swim + 2:30 bike + 40 min run (A)** (3:40)
 Race kit, race nutrition, clock running.
-**Time both transitions.** Bike at heart rate 155-160 in the bars. Run **40 minutes** at 4:36/km — longer than before, because the run is now the target.
+**Time both transitions.** Bike at heart rate 155-160 in the bars. Run **40 minutes** at 4:35/km — longer than before, because the run is now the target.
 *Everything she will do on race day, once, eighteen days early.*
 
 ---
@@ -222,8 +224,8 @@ RPE 4-5, all in the bars. Legs stay fresh for Thursday.
 > **Skill.** 4 × 50 m *sighting*.
 > **Cool-down.** 200 m easy.
 
-**Sat 05.09 — Long run: 17 km, last 4 at race effort (A)** (1:45)
-13 km easy, then **4 km at 4:36/km.** Last quality long run.
+**Sat 05.09 — Long run: 17 km, last 6 at race effort (A)** (1:45)
+11 km easy, then **6 km at 4:35/km.** Last quality long run.
 
 **Sun 06.09 — Bike: 2 h easy (B)** (2:00) **+ Easy run 25 min (C)** (0:25)
 
@@ -280,13 +282,13 @@ Last real ride. **Then check the bike over: tyres, brakes, bolts, gears.**
 
 **Swim 1.9 km — 38:00.** Start on the outside, not the middle. Sight every six strokes. Steady from the gun; the first 200 m always feel awful.
 
-**T1 — 4:45.** Longer than she is used to — it is a long run in from the beach. She knows the way, because she walked it yesterday.
+**T1 — 5:45.** Longer than she is used to — it is a long run in from the beach. She knows the way, because she walked it yesterday.
 
-**Bike 90 km — 2:36:30.** In the bars whenever the road allows. **Heart rate 155-160, and hold it.** On the climb toward Bertinoro the effort will want to rise — do not let it. Ignore anyone who passes. Eat every 30 minutes from the first hour.
+**Bike 90 km — 2:33:55.** In the bars whenever the road allows. **Heart rate 155-160, and hold it.** On the climb toward Bertinoro the effort will want to rise — do not let it. Ignore anyone who passes. Eat every 30 minutes from the first hour.
 
-**T2 — 3:30.**
+**T2 — 5:10.**
 
-**Run 21.1 km — 1:37:00.** The first 3 km will feel too easy at 4:40/km. Run them anyway. Then 4:36/km. From 15 km, whatever is left.
+**Run 21.1 km — 1:36:55.** The first 3 km will feel too easy at 4:40/km. Run them anyway. Then 4:35/km. From 15 km, whatever is left.
 
 *She rode 35.3 km/h and ran 4:26/km at Karlsfelder in July. Nothing here asks for more than she has already done.*
 
@@ -304,7 +306,7 @@ Last real ride. **Then check the bike over: tyres, brakes, bolts, gears.**
 
 **Book the bike fit for the week of 10 August.** Largest single time gain in the plan, and it needs several weeks of riding afterwards to settle.
 
-**Buy the aero helmet before Block 4**, so it is used on long rides rather than first worn on race day.
+**Buy the aero helmet AND a skinsuit before Block 4.** Both are worn on every long ride from then on, never first used on race day. The skinsuit alone is worth **2:23** — more than any training session in this plan. It is mandatory, not optional.
 
 **The power meter is broken** — Karlsfelder recorded 89 W average during a 35 km/h race. All bike pacing here is written in heart rate for that reason.
 
@@ -342,7 +344,7 @@ Last real ride. **Then check the bike over: tyres, brakes, bolts, gears.**
 
 **Tempo** (RPE 6-7) — sustainably uncomfortable. Could hold it an hour, wouldn't want to.
 
-**Race effort** — bike: heart rate 155-160, RPE 6. Run: 4:36/km.
+**Race effort** — bike: heart rate 155-160, RPE 6. Run: 4:35/km.
 
 ### Running
 
