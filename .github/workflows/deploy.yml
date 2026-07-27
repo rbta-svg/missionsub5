@@ -23,8 +23,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Validate plan.json
-        run: python3 -c "import json;d=json.load(open('data/plan.json'));print(f\"{len(d['days'])} days, {sum(len(x['sessions']) for x in d['days'])} sessions\")"
+      - name: Bake plan into index.html
+        run: python3 build.py
 
       - name: Assemble site
         run: |

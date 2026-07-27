@@ -16,12 +16,16 @@ Works offline once loaded, reads well on a phone, and follows the system light/d
 
 ### Run it locally
 
+Just double-click `index.html`. The plan is baked into the page, so it works straight from disk with no server.
+
+Optionally, to have edits to `data/plan.json` appear without rebuilding:
+
 ```bash
 python3 -m http.server 8000
 # open http://localhost:8000
 ```
 
-Opening `index.html` directly with `file://` will not work — the browser blocks the `fetch` of `plan.json`. Use the server.
+When served over http the page prefers the live `data/plan.json`; opened from disk it falls back to the embedded copy.
 
 ## Deploying
 
@@ -36,6 +40,8 @@ The workflow validates `data/plan.json` before deploying, so a malformed plan fa
 ## Editing the plan
 
 Everything lives in `data/plan.json`. No code changes needed.
+
+After editing, run `python3 build.py` to bake the change into `index.html` so the offline copy stays in step. The GitHub Action runs this automatically on deploy, so forgetting it only affects the local file.
 
 ```jsonc
 {
