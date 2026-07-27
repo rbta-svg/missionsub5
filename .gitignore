@@ -1,0 +1,29 @@
+# Raw training data — personal health information, never publish
+raw/
+*.FIT
+*.FIT.gz
+*.fit
+*.zip
+WorkoutExport-*
+WorkoutFileExport-*
+
+# Derived data containing per-session personal records
+*.csv
+!data/*.csv
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.pkl
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editors
+.vscode/
+.idea/
+*.swp

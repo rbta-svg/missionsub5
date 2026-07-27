@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chiara — Cervia 70.3</title>
+<style>
+  :root {
+    --bg: #f7f7f5;
+    --bg-elevated: #ffffff;
+    --bg-hero: #ffffff;
+    --text: #1c1c1a;
+    --text-muted: #6b6b66;
+    --border: #e0e0da;
+    --accent: #1c1c1a;
+
+    --today-bg: #eef5ff;
+    --today-border: #2a78d6;
+
+    --past-opacity: 0.45;
+
+    --badge-a-bg: #1c1c1a;
+    --badge-a-text: #ffffff;
+    --badge-b-bg: #d8d8d2;
+    --badge-b-text: #2a2a26;
+    --badge-c-bg: transparent;
+    --badge-c-text: #6b6b66;
+    --badge-c-border: #b8b8b0;
+
+    --error-bg: #fdecec;
+    --error-text: #8a2020;
+    --error-border: #e0a0a0;
+
+    --sport-swim: #2a78d6;
+    --sport-bike: #eb6834;
+    --sport-run: #1baf7a;
+    --sport-brick: #9b59b6;
+    --sport-strength: #eda100;
+    --sport-rest: #8a8a85;
+    --sport-race: #e34948;
+
+    --table-stripe: #f1f1ed;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #17171a;
+      --bg-elevated: #211f22;
+      --bg-hero: #211f22;
+      --text: #ececec;
+      --text-muted: #a0a0a0;
+      --border: #3a3a3e;
+      --accent: #ececec;
+
+      --today-bg: #1c2a3a;
+      --today-border: #4c96ea;
+
+      --badge-a-bg: #ececec;
+      --badge-a-text: #17171a;
+      --badge-b-bg: #3a3a3e;
+      --badge-b-text: #d6d6d6;
+      --badge-c-bg: transparent;
+      --badge-c-text: #9a9a9a;
+      --badge-c-border: #55555a;
+
+      --error-bg: #3a1f1f;
+      --error-text: #f0a0a0;
+      --error-border: #6a3232;
+
+      --table-stripe: #1f1e21;
+    }
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--text);
+  }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.45;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 16px 16px 64px;
+  }
+
+  a { color: inherit; }
+
+  /* ---------- Header ---------- */
+  header.top {
+    padding: 20px 0 16px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 20px;
+  }
+
+  header.top h1 {
+    margin: 0 0 4px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+  }
+
+  header.top .race-meta {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-bottom: 14px;
+  }
+
+  .countdown-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .stat-chip {
+    background: var(--bg-elevated);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 8px 14px;
+    min-width: 90px;
+  }
+
+  .stat-chip .label {
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--text-muted);
+    margin-bottom: 2px;
+  }
+
+  .stat-chip .value {
+    font-size: 1.15rem;
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* ---------- Error banner ---------- */
+  .error-banner {
+    background: var(--error-bg);
+    color: var(--error-text);
+    border: 1px solid var(--error-border);
+    border-radius: 10px;
+    padding: 14px 16px;
+    margin-bottom: 20px;
+    font-size: 0.92rem;
+  }
+
+  /* ---------- Section headings ---------- */
+  h2.section-title {
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-muted);
+    margin: 0 0 10px;
+    font-weight: 700;
+  }
+
+  section { margin-bottom: 34px; }
+
+  /* ---------- Hero: today ---------- */
+  .hero-box {
+    background: var(--bg-hero);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 18px;
+  }
+
+  .hero-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 4px;
+  }
+
+  .hero-heading .hero-date {
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+
+  .hero-block {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+  }
+
+  .hero-note {
+    margin-top: 10px;
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    background: var(--table-stripe);
+    border-radius: 8px;
+    padding: 8px 12px;
+  }
+
+  .hero-message {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    margin: 8px 0 14px;
+  }
+
+  .rest-banner {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 16px;
+    background: var(--table-stripe);
+    border-radius: 10px;
+    font-size: 1rem;
+  }
+
+  /* ---------- Session cards ---------- */
+  .session-card {
+    background: var(--bg-elevated);
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--card-color, var(--sport-rest));
+    border-radius: 10px;
+    padding: 12px 14px;
+    margin-top: 12px;
+  }
+
+  .session-top {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 4px;
+  }
+
+  .sport-label {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--text-muted);
+    font-weight: 700;
+  }
+
+  .session-title {
+    font-weight: 700;
+    font-size: 1rem;
+    flex: 1 1 auto;
+    min-width: 140px;
+  }
+
+  .session-duration {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .session-detail {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    margin-top: 6px;
+  }
+
+  .session-sets {
+    margin: 8px 0 0;
+    padding-left: 20px;
+    font-size: 0.86rem;
+  }
+
+  .session-sets li { margin-bottom: 3px; }
+
+  /* ---------- Priority badge ---------- */
+  .badge {
+    display: inline-block;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 700;
+    padding: 2px 7px;
+    border-radius: 5px;
+    line-height: 1.5;
+  }
+  .badge-A { background: var(--badge-a-bg); color: var(--badge-a-text); }
+  .badge-B { background: var(--badge-b-bg); color: var(--badge-b-text); }
+  .badge-C {
+    background: var(--badge-c-bg);
+    color: var(--badge-c-text);
+    border: 1px solid var(--badge-c-border);
+  }
+
+  /* ---------- Calendar ---------- */
+  .block-group { margin-bottom: 22px; }
+
+  .block-heading {
+    font-size: 0.95rem;
+    font-weight: 700;
+    margin: 18px 0 8px;
+    padding-bottom: 4px;
+    border-bottom: 1px solid var(--border);
+  }
+  .block-heading:first-child { margin-top: 0; }
+
+  .day-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 10px 10px;
+    border-radius: 8px;
+    border-left: 3px solid transparent;
+    cursor: pointer;
+    background: var(--bg-elevated);
+    border: 1px solid var(--border);
+    margin-bottom: 6px;
+  }
+
+  .day-row.is-past { opacity: var(--past-opacity); }
+
+  .day-row.is-today {
+    border-left: 3px solid var(--today-border);
+    background: var(--today-bg);
+  }
+
+  .day-row .day-left {
+    width: 78px;
+    flex: 0 0 78px;
+  }
+
+  .day-row .weekday {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--text-muted);
+  }
+
+  .day-row .daynum {
+    font-size: 0.95rem;
+    font-weight: 700;
+  }
+
+  .day-row .day-right {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+
+  .day-session-line {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    padding: 3px 0;
+    flex-wrap: wrap;
+  }
+
+  .dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    flex: 0 0 9px;
+    background: var(--dot-color, var(--sport-rest));
+  }
+
+  .day-session-title {
+    font-size: 0.88rem;
+    font-weight: 600;
+    overflow-wrap: anywhere;
+  }
+
+  .day-session-meta {
+    font-size: 0.76rem;
+    color: var(--text-muted);
+    white-space: nowrap;
+  }
+
+  .day-detail {
+    display: none;
+    margin-top: 8px;
+    padding-top: 8px;
+    border-top: 1px dashed var(--border);
+  }
+
+  .day-row.expanded .day-detail { display: block; }
+
+  .day-detail .session-detail-block {
+    margin-bottom: 10px;
+  }
+  .day-detail .session-detail-block:last-child { margin-bottom: 0; }
+
+  .day-note-inline {
+    margin-top: 8px;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    font-style: italic;
+  }
+
+  .toggle-hint {
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    margin-left: auto;
+    flex: 0 0 auto;
+    align-self: center;
+  }
+
+  /* ---------- Race plan table ---------- */
+  table.splits {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.88rem;
+  }
+
+  table.splits th, table.splits td {
+    text-align: left;
+    padding: 8px 10px;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+  }
+
+  table.splits th {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-muted);
+  }
+
+  table.splits tbody tr:nth-child(odd) { background: var(--table-stripe); }
+
+  /* ---------- Legend ---------- */
+  .legend {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    background: var(--bg-elevated);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 14px 16px;
+  }
+
+  .legend-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.86rem;
+  }
+
+  .legend-row .badge { flex: 0 0 auto; width: 22px; text-align: center; }
+
+  footer.foot {
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.75rem;
+    margin-top: 30px;
+  }
+
+  @media (max-width: 480px) {
+    header.top h1 { font-size: 1.25rem; }
+    .day-row .day-left { width: 58px; flex-basis: 58px; }
+    .stat-chip { min-width: 78px; padding: 6px 10px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <h1>Chiara — Cervia 70.3</h1>
+    <div class="race-meta" id="raceMeta">Loading race details…</div>
+    <div class="countdown-row" id="countdownRow"></div>
+  </header>
+
+  <div id="errorBanner"></div>
+
+  <section id="heroSection">
+    <h2 class="section-title">Today's training</h2>
+    <div class="hero-box" id="heroBox">
+      <div class="hero-message">Loading plan…</div>
+    </div>
+  </section>
+
+  <section id="calendarSection">
+    <h2 class="section-title">Calendar</h2>
+    <div id="calendarBox"></div>
+  </section>
+
+  <section id="raceSection">
+    <h2 class="section-title">Race plan</h2>
+    <div id="raceBox"></div>
+  </section>
+
+  <section id="legendSection">
+    <h2 class="section-title">Priority legend</h2>
+    <div class="legend" id="legendBox"></div>
+  </section>
+
+  <footer class="foot">Built for Chiara · data from ./data/plan.json</footer>
+</div>
+
+<script>
+(function () {
+  "use strict";
+
+  var SPORT_LABELS = {
+    swim: "Swim",
+    bike: "Bike",
+    run: "Run",
+    brick: "Brick",
+    strength: "Strength",
+    rest: "Rest",
+    race: "Race"
+  };
+
+  var SPORT_ICON = {
+    swim: "🏊",
+    bike: "🚴",
+    run: "🏃",
+    brick: "🔁",
+    strength: "🏋",
+    rest: "🛌",
+    race: "🏁"
+  };
+
+  var WEEKDAYS = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+  function parseLocalDate(dateStr) {
+    var parts = dateStr.split("-");
+    var y = Number(parts[0]);
+    var m = Number(parts[1]);
+    var d = Number(parts[2]);
+    return new Date(y, m - 1, d);
+  }
+
+  function pad2(n) { return n < 10 ? "0" + n : "" + n; }
+
+  function todayStr() {
+    var t = new Date();
+    return t.getFullYear() + "-" + pad2(t.getMonth() + 1) + "-" + pad2(t.getDate());
+  }
+
+  function daysBetween(fromDate, toDate) {
+    var MS = 24 * 60 * 60 * 1000;
+    var a = new Date(fromDate.getFullYear(), fromDate.getMonth(), fromDate.getDate());
+    var b = new Date(toDate.getFullYear(), toDate.getMonth(), toDate.getDate());
+    return Math.round((b - a) / MS);
+  }
+
+  function fmtDateLong(dateStr) {
+    var d = parseLocalDate(dateStr);
+    var weekday = WEEKDAYS[d.getDay()];
+    var months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+    return weekday + " " + d.getDate() + " " + months[d.getMonth()] + " " + d.getFullYear();
+  }
+
+  function el(tag, opts) {
+    var e = document.createElement(tag);
+    opts = opts || {};
+    if (opts.className) e.className = opts.className;
+    if (opts.text !== undefined) e.textContent = opts.text;
+    if (opts.html !== undefined) e.innerHTML = opts.html;
+    if (opts.attrs) {
+      for (var k in opts.attrs) {
+        e.setAttribute(k, opts.attrs[k]);
+      }
+    }
+    if (opts.style) {
+      for (var s in opts.style) {
+        e.style[s] = opts.style[s];
+      }
+    }
+    return e;
+  }
+
+  function sportVar(sport) {
+    return "var(--sport-" + (SPORT_LABELS[sport] ? sport : "rest") + ")";
+  }
+
+  function badgeEl(priority) {
+    var b = el("span", { className: "badge badge-" + priority, text: priority });
+    return b;
+  }
+
+  // ---------- Build a full session card (used in hero) ----------
+  function buildSessionCard(session) {
+    var card = el("div", { className: "session-card" });
+    card.style.setProperty("--card-color", sportVar(session.sport));
+
+    var top = el("div", { className: "session-top" });
+    var icon = SPORT_ICON[session.sport] || "";
+    var sportLabel = el("span", { className: "sport-label", text: (icon ? icon + " " : "") + (SPORT_LABELS[session.sport] || session.sport) });
+    var title = el("div", { className: "session-title", text: session.title || "" });
+    top.appendChild(sportLabel);
+    top.appendChild(title);
+    if (session.priority) top.appendChild(badgeEl(session.priority));
+    if (session.duration) top.appendChild(el("span", { className: "session-duration", text: session.duration }));
+    card.appendChild(top);
+
+    if (session.detail) {
+      card.appendChild(el("div", { className: "session-detail", text: session.detail }));
+    }
+
+    if (session.sets && session.sets.length) {
+      var ul = el("ul", { className: "session-sets" });
+      session.sets.forEach(function (line) {
+        ul.appendChild(el("li", { text: line }));
+      });
+      card.appendChild(ul);
+    }
+
+    return card;
+  }
+
+  // ---------- Compact session line (used in calendar row) ----------
+  function buildSessionLine(session) {
+    var line = el("div", { className: "day-session-line" });
+    var dot = el("span", { className: "dot" });
+    dot.style.setProperty("--dot-color", sportVar(session.sport));
+    line.appendChild(dot);
+    line.appendChild(el("span", { className: "day-session-title", text: session.title || "" }));
+    if (session.priority) line.appendChild(badgeEl(session.priority));
+    var metaBits = [SPORT_LABELS[session.sport] || session.sport];
+    if (session.duration) metaBits.push(session.duration);
+    line.appendChild(el("span", { className: "day-session-meta", text: metaBits.join(" · ") }));
+    return line;
+  }
+
+  function buildSplitsTable(splits) {
+    var table = el("table", { className: "splits" });
+    var thead = el("thead");
+    var headRow = el("tr");
+    ["Leg", "Time", "Note"].forEach(function (h) {
+      headRow.appendChild(el("th", { text: h }));
+    });
+    thead.appendChild(headRow);
+    table.appendChild(thead);
+
+    var tbody = el("tbody");
+    splits.forEach(function (s) {
+      var row = el("tr");
+      row.appendChild(el("td", { text: s.leg || "" }));
+      row.appendChild(el("td", { text: s.time || "" }));
+      row.appendChild(el("td", { text: s.note || "" }));
+      tbody.appendChild(row);
+    });
+    table.appendChild(tbody);
+    return table;
+  }
+
+  // ---------- Render header / countdown ----------
+  function renderHeader(plan) {
+    var race = plan.race;
+    document.getElementById("raceMeta").textContent =
+      race.name + " — " + race.location + " — " + fmtDateLong(race.date);
+
+    var raceDate = parseLocalDate(race.date);
+    var today = new Date();
+    var diff = daysBetween(today, raceDate);
+
+    var row = document.getElementById("countdownRow");
+    row.innerHTML = "";
+
+    var countdownLabel, countdownValue;
+    if (diff > 0) {
+      countdownLabel = "Days to race";
+      countdownValue = String(diff);
+    } else if (diff === 0) {
+      countdownLabel = "Today";
+      countdownValue = "Race day";
+    } else {
+      countdownLabel = "Race was";
+      countdownValue = Math.abs(diff) + "d ago";
+    }
+
+    var chips = [
+      [countdownLabel, countdownValue],
+      ["Target", race.target],
+      ["PB (" + race.pb_year + ")", race.pb]
+    ];
+
+    chips.forEach(function (c) {
+      var chip = el("div", { className: "stat-chip" });
+      chip.appendChild(el("div", { className: "label", text: c[0] }));
+      chip.appendChild(el("div", { className: "value", text: c[1] }));
+      row.appendChild(chip);
+    });
+  }
+
+  // ---------- Render hero (today's training) ----------
+  function renderHero(plan) {
+    var box = document.getElementById("heroBox");
+    box.innerHTML = "";
+
+    var tStr = todayStr();
+    var days = plan.days;
+    var match = null;
+    for (var i = 0; i < days.length; i++) {
+      if (days[i].date === tStr) { match = days[i]; break; }
+    }
+
+    if (match && match.date === plan.race.date) {
+      // Race day: show splits instead of sessions
+      var heading = el("div", { className: "hero-heading" });
+      heading.appendChild(el("div", { className: "hero-date", text: "🏁 It's race day!" }));
+      heading.appendChild(el("div", { className: "hero-block", text: fmtDateLong(match.date) }));
+      box.appendChild(heading);
+      box.appendChild(el("div", { className: "hero-message", text: "Good luck, Chiara. Here is the plan." }));
+      box.appendChild(buildSplitsTable(plan.race.splits));
+      return;
+    }
+
+    if (match) {
+      var isRestOnly = match.sessions.length > 0 && match.sessions.every(function (s) { return s.sport === "rest"; });
+
+      var h = el("div", { className: "hero-heading" });
+      h.appendChild(el("div", { className: "hero-date", text: fmtDateLong(match.date) }));
+      h.appendChild(el("div", { className: "hero-block", text: match.block }));
+      box.appendChild(h);
+
+      if (isRestOnly) {
+        var restBanner = el("div", { className: "rest-banner" });
+        restBanner.appendChild(el("span", { text: "🛌" }));
+        restBanner.appendChild(el("span", { text: "Rest day. Recover well — nothing to do today." }));
+        box.appendChild(restBanner);
+      } else {
+        match.sessions.forEach(function (session) {
+          box.appendChild(buildSessionCard(session));
+        });
+      }
+
+      if (match.note) {
+        box.appendChild(el("div", { className: "hero-note", text: "Note: " + match.note }));
+      }
+      return;
+    }
+
+    // No entry for today — find the next upcoming day
+    var next = null;
+    for (var j = 0; j < days.length; j++) {
+      if (days[j].date > tStr) { next = days[j]; break; }
+    }
+
+    if (next) {
+      var msg = (tStr < days[0].date)
+        ? "The plan hasn't started yet. Here is the first day:"
+        : "Nothing scheduled for today. Here is the next session:";
+      box.appendChild(el("div", { className: "hero-message", text: msg }));
+
+      var h2 = el("div", { className: "hero-heading" });
+      h2.appendChild(el("div", { className: "hero-date", text: fmtDateLong(next.date) }));
+      h2.appendChild(el("div", { className: "hero-block", text: next.block }));
+      box.appendChild(h2);
+
+      var nextIsRest = next.sessions.length > 0 && next.sessions.every(function (s) { return s.sport === "rest"; });
+      if (nextIsRest) {
+        var rb = el("div", { className: "rest-banner" });
+        rb.appendChild(el("span", { text: "🛌" }));
+        rb.appendChild(el("span", { text: "Rest day." }));
+        box.appendChild(rb);
+      } else {
+        next.sessions.forEach(function (session) {
+          box.appendChild(buildSessionCard(session));
+        });
+      }
+      if (next.note) {
+        box.appendChild(el("div", { className: "hero-note", text: "Note: " + next.note }));
+      }
+    } else {
+      box.appendChild(el("div", { className: "hero-message", text: "The race is behind you now. Hope it went brilliantly!" }));
+    }
+  }
+
+  // ---------- Render calendar ----------
+  function renderCalendar(plan) {
+    var box = document.getElementById("calendarBox");
+    box.innerHTML = "";
+    var tStr = todayStr();
+
+    var currentBlock = null;
+    var groupEl = null;
+
+    plan.days.forEach(function (day, idx) {
+      if (day.block !== currentBlock) {
+        currentBlock = day.block;
+        groupEl = el("div", { className: "block-group" });
+        groupEl.appendChild(el("div", { className: "block-heading", text: currentBlock }));
+        box.appendChild(groupEl);
+      }
+
+      var isPast = day.date < tStr;
+      var isToday = day.date === tStr;
+
+      var rowClass = "day-row";
+      if (isPast) rowClass += " is-past";
+      if (isToday) rowClass += " is-today";
+
+      var row = el("div", { className: rowClass, attrs: { "data-idx": String(idx), tabindex: "0", role: "button", "aria-expanded": "false" } });
+
+      var d = parseLocalDate(day.date);
+      var left = el("div", { className: "day-left" });
+      left.appendChild(el("div", { className: "weekday", text: WEEKDAYS[d.getDay()] }));
+      left.appendChild(el("div", { className: "daynum", text: d.getDate() + " " + ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"][d.getMonth()] }));
+      row.appendChild(left);
+
+      var right = el("div", { className: "day-right" });
+      day.sessions.forEach(function (session) {
+        right.appendChild(buildSessionLine(session));
+      });
+
+      // Expandable detail panel
+      var detail = el("div", { className: "day-detail" });
+      var hasDetail = day.sessions.some(function (s) { return s.detail || (s.sets && s.sets.length); }) || !!day.note;
+
+      day.sessions.forEach(function (session) {
+        if (session.detail || (session.sets && session.sets.length)) {
+          var blockDiv = el("div", { className: "session-detail-block" });
+          blockDiv.appendChild(el("div", { className: "session-title", text: session.title }));
+          if (session.detail) {
+            blockDiv.appendChild(el("div", { className: "session-detail", text: session.detail }));
+          }
+          if (session.sets && session.sets.length) {
+            var ul = el("ul", { className: "session-sets" });
+            session.sets.forEach(function (line) { ul.appendChild(el("li", { text: line })); });
+            blockDiv.appendChild(ul);
+          }
+          detail.appendChild(blockDiv);
+        }
+      });
+      if (day.note) {
+        detail.appendChild(el("div", { className: "day-note-inline", text: "Note: " + day.note }));
+      }
+      right.appendChild(detail);
+
+      row.appendChild(right);
+
+      if (hasDetail) {
+        row.addEventListener("click", function () {
+          var expanded = row.classList.toggle("expanded");
+          row.setAttribute("aria-expanded", expanded ? "true" : "false");
+        });
+        row.addEventListener("keydown", function (ev) {
+          if (ev.key === "Enter" || ev.key === " ") {
+            ev.preventDefault();
+            row.click();
+          }
+        });
+        row.style.cursor = "pointer";
+      } else {
+        row.style.cursor = "default";
+      }
+
+      groupEl.appendChild(row);
+    });
+  }
+
+  // ---------- Render race plan table ----------
+  function renderRacePlan(plan) {
+    var box = document.getElementById("raceBox");
+    box.innerHTML = "";
+    box.appendChild(buildSplitsTable(plan.race.splits));
+  }
+
+  // ---------- Render legend ----------
+  function renderLegend(plan) {
+    var box = document.getElementById("legendBox");
+    box.innerHTML = "";
+    ["A", "B", "C"].forEach(function (p) {
+      var row = el("div", { className: "legend-row" });
+      row.appendChild(badgeEl(p));
+      row.appendChild(el("span", { text: plan.priorities[p] || "" }));
+      box.appendChild(row);
+    });
+  }
+
+  function showError(message) {
+    var banner = document.getElementById("errorBanner");
+    banner.innerHTML = "";
+    banner.appendChild(el("div", { className: "error-banner", text: message }));
+    document.getElementById("heroBox").innerHTML = "";
+    document.getElementById("heroBox").appendChild(
+      el("div", { className: "hero-message", text: "Unable to load today's training." })
+    );
+  }
+
+  function draw(plan) {
+    renderHeader(plan);
+    renderHero(plan);
+    renderCalendar(plan);
+    renderRacePlan(plan);
+    renderLegend(plan);
+  }
+
+  function embeddedPlan() {
+    var node = document.getElementById("plan-data");
+    if (!node) { return null; }
+    try {
+      var parsed = JSON.parse(node.textContent);
+      return (parsed && parsed.days && parsed.days.length) ? parsed : null;
+    } catch (e) {
+      return null;
+    }
+  }
+
+  function init() {
+    var baked = embeddedPlan();
+
+    // Draw immediately from the embedded copy so the page works from file://
+    if (baked) { draw(baked); }
+
+    // When served over http(s), prefer the live file so edits to
+    // data/plan.json appear without rebuilding the page.
+    if (location.protocol === "http:" || location.protocol === "https:") {
+      fetch("./data/plan.json")
+        .then(function (resp) {
+          if (!resp.ok) { throw new Error("status " + resp.status); }
+          return resp.json();
+        })
+        .then(function (plan) {
+          if (plan && plan.days && plan.days.length) { draw(plan); }
+        })
+        .catch(function () {
+          if (!baked) {
+            showError("Couldn't load the training plan. Check that data/plan.json is present.");
+          }
+        });
+    } else if (!baked) {
+      showError("Couldn't load the training plan — no embedded copy found. Run: python3 build.py");
+    }
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", init);
+  } else {
+    init();
+  }
+})();
+</script>
+<script id="plan-data" type="application/json">{"athlete":"Chiara","race":{"name":"Ironman 70.3 Emilia-Romagna","location":"Cervia, Italy","date":"2026-09-17","target":"5:02:55","pb":"5:22:59","pb_year":2025,"splits":[{"leg":"Swim 1.9 km","time":"38:30","note":"Start wide, sight every six strokes"},{"leg":"T1","time":"5:00","note":"Long run in from the beach"},{"leg":"Bike 90 km","time":"2:37:00","note":"HR 152-158. In the bars. Do not chase Bertinoro."},{"leg":"T2","time":"3:45","note":""},{"leg":"Run 21.1 km","time":"1:38:30","note":"First 3 km at 4:45, then 4:40/km"}]},"priorities":{"A":"Never skip","B":"Move it, don't bin it","C":"Nice to have"},"days":[{"date":"2026-07-27","block":"Bridge week","sessions":[{"sport":"rest","title":"Rest or easy spin","priority":"C"}]},{"date":"2026-07-28","block":"Bridge week","sessions":[{"sport":"swim","title":"Easy swim 2 km","priority":"B","duration":"0:50","detail":"Relaxed. Nothing hard."}]},{"date":"2026-07-29","block":"Bridge week","sessions":[{"sport":"bike","title":"Long ride ~150 km","priority":"A","duration":"6:15","detail":"Easy all day. Use the aero bars in 30-minute blocks — sit up when the neck complains."}]},{"date":"2026-07-30","block":"Bridge week","sessions":[{"sport":"rest","title":"Rest","priority":"C"}]},{"date":"2026-07-31","block":"Bridge week","sessions":[{"sport":"run","title":"Easy run 5.5 km","priority":"C","duration":"0:35","detail":"Very relaxed."}]},{"date":"2026-08-01","block":"Bridge week","sessions":[{"sport":"run","title":"Fartlek ~6 km","priority":"B","duration":"0:45"}]},{"date":"2026-08-02","block":"Bridge week","sessions":[{"sport":"bike","title":"Ride ~80 km","priority":"A","duration":"3:00"},{"sport":"run","title":"5 km straight off the bike","priority":"A","duration":"0:27"}]},{"date":"2026-08-03","block":"Block 1 · Build","sessions":[{"sport":"swim","title":"Test day","priority":"A","duration":"1:00","detail":"Sets her swim paces for the whole plan.","sets":["Warm-up: 400 m easy, any stroke","4 × 50 m catch-up drill, 20 sec rest after each","TEST: 400 m as fast as she can hold to the end — hard but even, not a sprint that dies","Rest completely, 3-4 minutes","TEST: 200 m the same way","Write both times down","Cool-down: 200 m easy"]},{"sport":"run","title":"Easy run","priority":"C","duration":"0:40","detail":"40 minutes easy, RPE 4. Conversational throughout."}]},{"date":"2026-08-04","block":"Block 1 · Build","sessions":[{"sport":"bike","title":"90 min — aero introduction","priority":"B","duration":"1:30","detail":"RPE 5. 45 minutes continuous in the bars, then sit up. Cadence 85-95."}]},{"date":"2026-08-05","block":"Block 1 · Build","sessions":[{"sport":"rest","title":"Rest day","priority":"A"}]},{"date":"2026-08-06","block":"Block 1 · Build","sessions":[{"sport":"run","title":"Fartlek","priority":"A","duration":"0:50","detail":"10 min easy · 6 × (3 min at RPE 7, then 2 min easy jog) · 10 min easy"},{"sport":"strength","title":"Gym","priority":"C","duration":"1:00","detail":"Legs, hips, core. Short and done beats perfect and skipped."}]},{"date":"2026-08-07","block":"Block 1 · Build","sessions":[{"sport":"swim","title":"Threshold","priority":"B","duration":"1:00","sets":["Warm-up: 300 m easy","4 × 50 m — kick the first length (legs only, no arms), swim the second normally. 20 sec rest","Main set: 6 × 200 m at her test pace, 30 sec rest after each","Cool-down: 200 m easy with the pull buoy"]}]},{"date":"2026-08-08","block":"Block 1 · Build","sessions":[{"sport":"run","title":"Long run 16 km","priority":"A","duration":"1:40","detail":"13 km easy, then 3 km at 4:40/km."}]},{"date":"2026-08-09","block":"Block 1 · Build","sessions":[{"sport":"bike","title":"2:30 easy","priority":"A","duration":"2:30","detail":"RPE 5. Two blocks of 30 min in the bars. Eat every 45 minutes."}]},{"date":"2026-08-10","block":"Block 2 · Build","sessions":[{"sport":"swim","title":"Aerobic and sighting","priority":"B","duration":"1:00","sets":["Warm-up: 200 m easy","8 × 50 m alternating — odd ones kick only, even ones catch-up drill. 20 sec rest","Main set: 600 m continuous, steady and comfortable","Then 4 × 100 m, each slightly faster than the last, 20 sec rest","Skill: 4 × 50 m sighting — eyes forward every 6 strokes, fix on one point","Cool-down: 200 m easy"]},{"sport":"run","title":"Easy run","priority":"C","duration":"0:40","detail":"40 minutes easy, RPE 4."}],"note":"Book the bike fit this week."},{"date":"2026-08-11","block":"Block 2 · Build","sessions":[{"sport":"bike","title":"Intervals in the bars","priority":"B","duration":"1:30","detail":"20 min easy · 20 × (100 sec at RPE 7-8, 60 sec easy) · 10 min easy. All in the bars."}]},{"date":"2026-08-12","block":"Block 2 · Build","sessions":[{"sport":"rest","title":"Rest day","priority":"A"}]},{"date":"2026-08-13","block":"Block 2 · Build","sessions":[{"sport":"run","title":"Progressive 9 km","priority":"A","duration":"0:50","detail":"3 km at RPE 4 · 3 km at RPE 6 · 3 km at RPE 7. Each third faster."},{"sport":"strength","title":"Gym","priority":"C","duration":"1:00"}]},{"date":"2026-08-14","block":"Block 2 · Build","sessions":[{"sport":"swim","title":"Toys and technique","priority":"B","duration":"1:00","sets":["Warm-up: 200 m easy","4 × 100 m with the pull buoy, 20 sec rest","4 × 100 m wearing paddles, 20 sec rest","4 × 100 m easy freestyle with nothing on — carry the paddle feeling across","Cool-down: 200 m easy"]}]},{"date":"2026-08-15","block":"Block 2 · Build","sessions":[{"sport":"run","title":"Long run 18 km","priority":"A","duration":"1:55","detail":"15 km easy, then 3 km at 4:40/km."}]},{"date":"2026-08-16","block":"Block 2 · Build","sessions":[{"sport":"brick","title":"2 h bike + 20 min run","priority":"A","duration":"2:30","detail":"2 h ride, 90 min continuous in the bars at HR 150-156. Straight off: 20 min at 4:40/km. Practise the shoe change."}]},{"date":"2026-08-17","block":"Block 3 · Recovery","sessions":[{"sport":"rest","title":"Rest day or gym","priority":"C"}]},{"date":"2026-08-18","block":"Block 3 · Recovery","sessions":[{"sport":"swim","title":"Technique only","priority":"B","duration":"0:50","sets":["Warm-up: 300 m easy","8 × 50 m catch-up drill wearing fins, 20 sec rest — the fins keep her moving so the drill can be done slowly and properly","400 m easy and relaxed, thinking about the long reach","Cool-down: 200 m easy. Nothing hard today."]}]},{"date":"2026-08-19","block":"Block 3 · Recovery","sessions":[{"sport":"rest","title":"Rest day","priority":"A"}]},{"date":"2026-08-20","block":"Block 3 · Recovery","sessions":[{"sport":"run","title":"Pyramid intervals","priority":"A","duration":"0:50","detail":"15 min warm-up · 200 / 400 / 800 / 400 / 200 m at RPE 8, jogging the same distance between each · 10 min easy"}]},{"date":"2026-08-21","block":"Block 3 · Recovery","sessions":[{"sport":"bike","title":"80 min easy — after the fit","priority":"A","duration":"1:20","detail":"Do this AFTER the bike fit. RPE 4-5, all in the bars. Feel the new position, change nothing else."}]},{"date":"2026-08-22","block":"Block 3 · Recovery","sessions":[{"sport":"run","title":"Long run 14 km easy","priority":"A","duration":"1:25","detail":"All easy, no finish effort. That is the point of a recovery week."}]},{"date":"2026-08-23","block":"Block 3 · Recovery","sessions":[{"sport":"bike","title":"2 h easy","priority":"B","duration":"2:00"},{"sport":"run","title":"Easy run","priority":"C","duration":"0:25"}]},{"date":"2026-08-24","block":"Block 4 · Peak","sessions":[{"sport":"swim","title":"Threshold","priority":"B","duration":"1:00","sets":["Warm-up: 300 m easy","6 × 50 m — catch-up drill for the first length, second length normal, starting easy and finishing fast. 20 sec rest","Main set: 8 × 150 m at her test pace, 25 sec rest","Skill: 4 × 50 m sighting","Cool-down: 200 m easy"]},{"sport":"run","title":"Easy run","priority":"C","duration":"0:45"}],"note":"Aero helmet should be in use from this week."},{"date":"2026-08-25","block":"Block 4 · Peak","sessions":[{"sport":"bike","title":"Race-effort hour","priority":"A","duration":"2:00","detail":"30 min easy · 60 min continuous at HR 152-158 in the bars · 30 min easy. This is exactly the effort for 17 September."}]},{"date":"2026-08-26","block":"Block 4 · Peak","sessions":[{"sport":"rest","title":"Rest day","priority":"A"}]},{"date":"2026-08-27","block":"Block 4 · Peak","sessions":[{"sport":"run","title":"5 × 1 km at race effort","priority":"A","duration":"0:55","detail":"2 km easy · 5 × 1 km at 4:35/km, 90 sec jog between · 2 km easy"},{"sport":"strength","title":"Gym","priority":"C","duration":"0:45"}]},{"date":"2026-08-28","block":"Block 4 · Peak","sessions":[{"sport":"swim","title":"Open water","priority":"B","duration":"1:00","detail":"Lake or sea if she can get to one, wetsuit on. Practise beach starts, sighting, and swimming straight without lane ropes.","sets":["Pool alternative: 300 m warm-up","6 × 200 m steady, eyes forward every 6 strokes","300 m easy"]}]},{"date":"2026-08-29","block":"Block 4 · Peak","sessions":[{"sport":"run","title":"Long run 21 km","priority":"A","duration":"2:10","detail":"Longest run of the plan. Steady RPE 5, last 2 km at race effort. Eat on the run."}]},{"date":"2026-08-30","block":"Block 4 · Peak","sessions":[{"sport":"brick","title":"Full rehearsal","priority":"A","duration":"3:30","detail":"1 km swim + 2:30 bike + 30 min run. Race kit, race nutrition, clock running. Time both transitions. Bike at HR 152-158 in the bars. Run 30 min at 4:40/km."}]},{"date":"2026-08-31","block":"Block 5 · Peak 2","sessions":[{"sport":"swim","title":"Race pace","priority":"B","duration":"1:00","sets":["Warm-up: 300 m easy","Main set: 3 × 600 m at the effort she intends to swim on race day — steady and repeatable, not hard. 45 sec rest","Cool-down: 300 m easy"]},{"sport":"run","title":"Easy run","priority":"C","duration":"0:40"}]},{"date":"2026-09-01","block":"Block 5 · Peak 2","sessions":[{"sport":"bike","title":"90 min easy","priority":"B","duration":"1:30","detail":"RPE 4-5, all in the bars. Legs stay fresh for Thursday."}]},{"date":"2026-09-02","block":"Block 5 · Peak 2","sessions":[{"sport":"rest","title":"Rest day","priority":"A"}]},{"date":"2026-09-03","block":"Block 5 · Peak 2","sessions":[{"sport":"brick","title":"1:45 bike + 5 km run","priority":"A","duration":"2:15","detail":"1:45 ride with 60 min at HR 152-158 in the bars. Straight off: 5 km at 4:35/km. Fast, timed transition."}]},{"date":"2026-09-04","block":"Block 5 · Peak 2","sessions":[{"sport":"swim","title":"Easy technique","priority":"C","duration":"0:50","sets":["Warm-up: 300 m easy","6 × 50 m catch-up drill, 20 sec rest","400 m steady","4 × 50 m sighting","Cool-down: 200 m easy"]}]},{"date":"2026-09-05","block":"Block 5 · Peak 2","sessions":[{"sport":"run","title":"Long run 17 km","priority":"A","duration":"1:45","detail":"13 km easy, then 4 km at 4:40/km. Last quality long run."}]},{"date":"2026-09-06","block":"Block 5 · Peak 2","sessions":[{"sport":"bike","title":"2 h easy","priority":"B","duration":"2:00"},{"sport":"run","title":"Easy run","priority":"C","duration":"0:25"}]},{"date":"2026-09-07","block":"Block 6 · Taper","sessions":[{"sport":"swim","title":"Race week sharpener","priority":"B","duration":"0:45","sets":["Warm-up: 200 m easy","4 × 200 m at race effort, 30 sec rest","4 × 50 m fast, 30 sec rest","Cool-down: 200 m easy"]}],"note":"Volume down 40%. Intensity stays. She will feel restless — that means it is working."},{"date":"2026-09-08","block":"Block 6 · Taper","sessions":[{"sport":"run","title":"4 × 1 km at race effort","priority":"A","duration":"0:50","detail":"2 km easy · 4 × 1 km at 4:35/km, 90 sec jog · 2 km easy"}]},{"date":"2026-09-09","block":"Block 6 · Taper","sessions":[{"sport":"rest","title":"Rest day","priority":"A"}]},{"date":"2026-09-10","block":"Block 6 · Taper","sessions":[{"sport":"bike","title":"75 min with sharpeners","priority":"B","duration":"1:15","detail":"In the bars throughout. 4 × 3 min at race effort, everything else easy."}]},{"date":"2026-09-11","block":"Block 6 · Taper","sessions":[{"sport":"swim","title":"Easy","priority":"C","duration":"0:40","sets":["Warm-up: 300 m easy","6 × 100 m relaxed, eyes forward every 6 strokes","Cool-down: 200 m easy. Feel good, do no work."]}]},{"date":"2026-09-12","block":"Block 6 · Taper","sessions":[{"sport":"run","title":"10 km, last 2 at race effort","priority":"A","duration":"1:00"}]},{"date":"2026-09-13","block":"Block 6 · Taper","sessions":[{"sport":"bike","title":"90 min easy","priority":"B","duration":"1:30","detail":"Last real ride. Then check the bike over: tyres, brakes, bolts, gears."},{"sport":"run","title":"Easy run","priority":"C","duration":"0:20"}]},{"date":"2026-09-14","block":"Block 7 · Race week","sessions":[{"sport":"swim","title":"Activation","priority":"B","duration":"0:35","sets":["Warm-up: 200 m easy","6 × 100 m, each a little faster, finishing at race effort. 30 sec rest","Cool-down: 200 m easy"]}]},{"date":"2026-09-15","block":"Block 7 · Race week","sessions":[{"sport":"run","title":"Activation","priority":"A","duration":"0:30","detail":"20 min easy with 4 × 30 sec at race effort."}],"note":"Travel day. Pack: race kit, wetsuit, aero helmet, nutrition, spares, timing chip."},{"date":"2026-09-16","block":"Block 7 · Race week","sessions":[{"sport":"bike","title":"Activation + walk the transitions","priority":"A","duration":"0:30","detail":"20-30 min easy spin, 3 × 1 min at race effort, check every gear. Then WALK both transitions: swim exit to bike, bike in to run out. Count the racks."}]},{"date":"2026-09-17","block":"Block 7 · Race week","sessions":[{"sport":"race","title":"IRONMAN 70.3 CERVIA","priority":"A","detail":"Race day."}]}]}</script>
+</body>
+</html>

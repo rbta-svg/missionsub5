@@ -1,0 +1,849 @@
+{
+ "athlete": "Chiara",
+ "race": {
+  "name": "Ironman 70.3 Emilia-Romagna",
+  "location": "Cervia, Italy",
+  "date": "2026-09-17",
+  "target": "5:02:55",
+  "pb": "5:22:59",
+  "pb_year": 2025,
+  "splits": [
+   {
+    "leg": "Swim 1.9 km",
+    "time": "38:30",
+    "note": "Start wide, sight every six strokes"
+   },
+   {
+    "leg": "T1",
+    "time": "5:00",
+    "note": "Long run in from the beach"
+   },
+   {
+    "leg": "Bike 90 km",
+    "time": "2:37:00",
+    "note": "HR 152-158. In the bars. Do not chase Bertinoro."
+   },
+   {
+    "leg": "T2",
+    "time": "3:45",
+    "note": ""
+   },
+   {
+    "leg": "Run 21.1 km",
+    "time": "1:38:30",
+    "note": "First 3 km at 4:45, then 4:40/km"
+   }
+  ]
+ },
+ "priorities": {
+  "A": "Never skip",
+  "B": "Move it, don't bin it",
+  "C": "Nice to have"
+ },
+ "days": [
+  {
+   "date": "2026-07-27",
+   "block": "Bridge week",
+   "sessions": [
+    {
+     "sport": "rest",
+     "title": "Rest or easy spin",
+     "priority": "C"
+    }
+   ]
+  },
+  {
+   "date": "2026-07-28",
+   "block": "Bridge week",
+   "sessions": [
+    {
+     "sport": "swim",
+     "title": "Easy swim 2 km",
+     "priority": "B",
+     "duration": "0:50",
+     "detail": "Relaxed. Nothing hard."
+    }
+   ]
+  },
+  {
+   "date": "2026-07-29",
+   "block": "Bridge week",
+   "sessions": [
+    {
+     "sport": "bike",
+     "title": "Long ride ~150 km",
+     "priority": "A",
+     "duration": "6:15",
+     "detail": "Easy all day. Use the aero bars in 30-minute blocks — sit up when the neck complains."
+    }
+   ]
+  },
+  {
+   "date": "2026-07-30",
+   "block": "Bridge week",
+   "sessions": [
+    {
+     "sport": "rest",
+     "title": "Rest",
+     "priority": "C"
+    }
+   ]
+  },
+  {
+   "date": "2026-07-31",
+   "block": "Bridge week",
+   "sessions": [
+    {
+     "sport": "run",
+     "title": "Easy run 5.5 km",
+     "priority": "C",
+     "duration": "0:35",
+     "detail": "Very relaxed."
+    }
+   ]
+  },
+  {
+   "date": "2026-08-01",
+   "block": "Bridge week",
+   "sessions": [
+    {
+     "sport": "run",
+     "title": "Fartlek ~6 km",
+     "priority": "B",
+     "duration": "0:45"
+    }
+   ]
+  },
+  {
+   "date": "2026-08-02",
+   "block": "Bridge week",
+   "sessions": [
+    {
+     "sport": "bike",
+     "title": "Ride ~80 km",
+     "priority": "A",
+     "duration": "3:00"
+    },
+    {
+     "sport": "run",
+     "title": "5 km straight off the bike",
+     "priority": "A",
+     "duration": "0:27"
+    }
+   ]
+  },
+  {
+   "date": "2026-08-03",
+   "block": "Block 1 · Build",
+   "sessions": [
+    {
+     "sport": "swim",
+     "title": "Test day",
+     "priority": "A",
+     "duration": "1:00",
+     "detail": "Sets her swim paces for the whole plan.",
+     "sets": [
+      "Warm-up: 400 m easy, any stroke",
+      "4 × 50 m catch-up drill, 20 sec rest after each",
+      "TEST: 400 m as fast as she can hold to the end — hard but even, not a sprint that dies",
+      "Rest completely, 3-4 minutes",
+      "TEST: 200 m the same way",
+      "Write both times down",
+      "Cool-down: 200 m easy"
+     ]
+    },
+    {
+     "sport": "run",
+     "title": "Easy run",
+     "priority": "C",
+     "duration": "0:40",
+     "detail": "40 minutes easy, RPE 4. Conversational throughout."
+    }
+   ]
+  },
+  {
+   "date": "2026-08-04",
+   "block": "Block 1 · Build",
+   "sessions": [
+    {
+     "sport": "bike",
+     "title": "90 min — aero introduction",
+     "priority": "B",
+     "duration": "1:30",
+     "detail": "RPE 5. 45 minutes continuous in the bars, then sit up. Cadence 85-95."
+    }
+   ]
+  },
+  {
+   "date": "2026-08-05",
+   "block": "Block 1 · Build",
+   "sessions": [
+    {
+     "sport": "rest",
+     "title": "Rest day",
+     "priority": "A"
+    }
+   ]
+  },
+  {
+   "date": "2026-08-06",
+   "block": "Block 1 · Build",
+   "sessions": [
+    {
+     "sport": "run",
+     "title": "Fartlek",
+     "priority": "A",
+     "duration": "0:50",
+     "detail": "10 min easy · 6 × (3 min at RPE 7, then 2 min easy jog) · 10 min easy"
+    },
+    {
+     "sport": "strength",
+     "title": "Gym",
+     "priority": "C",
+     "duration": "1:00",
+     "detail": "Legs, hips, core. Short and done beats perfect and skipped."
+    }
+   ]
+  },
+  {
+   "date": "2026-08-07",
+   "block": "Block 1 · Build",
+   "sessions": [
+    {
+     "sport": "swim",
+     "title": "Threshold",
+     "priority": "B",
+     "duration": "1:00",
+     "sets": [
+      "Warm-up: 300 m easy",
+      "4 × 50 m — kick the first length (legs only, no arms), swim the second normally. 20 sec rest",
+      "Main set: 6 × 200 m at her test pace, 30 sec rest after each",
+      "Cool-down: 200 m easy with the pull buoy"
+     ]
+    }
+   ]
+  },
+  {
+   "date": "2026-08-08",
+   "block": "Block 1 · Build",
+   "sessions": [
+    {
+     "sport": "run",
+     "title": "Long run 16 km",
+     "priority": "A",
+     "duration": "1:40",
+     "detail": "13 km easy, then 3 km at 4:40/km."
+    }
+   ]
+  },
+  {
+   "date": "2026-08-09",
+   "block": "Block 1 · Build",
+   "sessions": [
+    {
+     "sport": "bike",
+     "title": "2:30 easy",
+     "priority": "A",
+     "duration": "2:30",
+     "detail": "RPE 5. Two blocks of 30 min in the bars. Eat every 45 minutes."
+    }
+   ]
+  },
+  {
+   "date": "2026-08-10",
+   "block": "Block 2 · Build",
+   "sessions": [
+    {
+     "sport": "swim",
+     "title": "Aerobic and sighting",
+     "priority": "B",
+     "duration": "1:00",
+     "sets": [
+      "Warm-up: 200 m easy",
+      "8 × 50 m alternating — odd ones kick only, even ones catch-up drill. 20 sec rest",
+      "Main set: 600 m continuous, steady and comfortable",
+      "Then 4 × 100 m, each slightly faster than the last, 20 sec rest",
+      "Skill: 4 × 50 m sighting — eyes forward every 6 strokes, fix on one point",
+      "Cool-down: 200 m easy"
+     ]
+    },
+    {
+     "sport": "run",
+     "title": "Easy run",
+     "priority": "C",
+     "duration": "0:40",
+     "detail": "40 minutes easy, RPE 4."
+    }
+   ],
+   "note": "Book the bike fit this week."
+  },
+  {
+   "date": "2026-08-11",
+   "block": "Block 2 · Build",
+   "sessions": [
+    {
+     "sport": "bike",
+     "title": "Intervals in the bars",
+     "priority": "B",
+     "duration": "1:30",
+     "detail": "20 min easy · 20 × (100 sec at RPE 7-8, 60 sec easy) · 10 min easy. All in the bars."
+    }
+   ]
+  },
+  {
+   "date": "2026-08-12",
+   "block": "Block 2 · Build",
+   "sessions": [
+    {
+     "sport": "rest",
+     "title": "Rest day",
+     "priority": "A"
+    }
+   ]
+  },
+  {
+   "date": "2026-08-13",
+   "block": "Block 2 · Build",
+   "sessions": [
+    {
+     "sport": "run",
+     "title": "Progressive 9 km",
+     "priority": "A",
+     "duration": "0:50",
+     "detail": "3 km at RPE 4 · 3 km at RPE 6 · 3 km at RPE 7. Each third faster."
+    },
+    {
+     "sport": "strength",
+     "title": "Gym",
+     "priority": "C",
+     "duration": "1:00"
+    }
+   ]
+  },
+  {
+   "date": "2026-08-14",
+   "block": "Block 2 · Build",
+   "sessions": [
+    {
+     "sport": "swim",
+     "title": "Toys and technique",
+     "priority": "B",
+     "duration": "1:00",
+     "sets": [
+      "Warm-up: 200 m easy",
+      "4 × 100 m with the pull buoy, 20 sec rest",
+      "4 × 100 m wearing paddles, 20 sec rest",
+      "4 × 100 m easy freestyle with nothing on — carry the paddle feeling across",
+      "Cool-down: 200 m easy"
+     ]
+    }
+   ]
+  },
+  {
+   "date": "2026-08-15",
+   "block": "Block 2 · Build",
+   "sessions": [
+    {
+     "sport": "run",
+     "title": "Long run 18 km",
+     "priority": "A",
+     "duration": "1:55",
+     "detail": "15 km easy, then 3 km at 4:40/km."
+    }
+   ]
+  },
+  {
+   "date": "2026-08-16",
+   "block": "Block 2 · Build",
+   "sessions": [
+    {
+     "sport": "brick",
+     "title": "2 h bike + 20 min run",
+     "priority": "A",
+     "duration": "2:30",
+     "detail": "2 h ride, 90 min continuous in the bars at HR 150-156. Straight off: 20 min at 4:40/km. Practise the shoe change."
+    }
+   ]
+  },
+  {
+   "date": "2026-08-17",
+   "block": "Block 3 · Recovery",
+   "sessions": [
+    {
+     "sport": "rest",
+     "title": "Rest day or gym",
+     "priority": "C"
+    }
+   ]
+  },
+  {
+   "date": "2026-08-18",
+   "block": "Block 3 · Recovery",
+   "sessions": [
+    {
+     "sport": "swim",
+     "title": "Technique only",
+     "priority": "B",
+     "duration": "0:50",
+     "sets": [
+      "Warm-up: 300 m easy",
+      "8 × 50 m catch-up drill wearing fins, 20 sec rest — the fins keep her moving so the drill can be done slowly and properly",
+      "400 m easy and relaxed, thinking about the long reach",
+      "Cool-down: 200 m easy. Nothing hard today."
+     ]
+    }
+   ]
+  },
+  {
+   "date": "2026-08-19",
+   "block": "Block 3 · Recovery",
+   "sessions": [
+    {
+     "sport": "rest",
+     "title": "Rest day",
+     "priority": "A"
+    }
+   ]
+  },
+  {
+   "date": "2026-08-20",
+   "block": "Block 3 · Recovery",
+   "sessions": [
+    {
+     "sport": "run",
+     "title": "Pyramid intervals",
+     "priority": "A",
+     "duration": "0:50",
+     "detail": "15 min warm-up · 200 / 400 / 800 / 400 / 200 m at RPE 8, jogging the same distance between each · 10 min easy"
+    }
+   ]
+  },
+  {
+   "date": "2026-08-21",
+   "block": "Block 3 · Recovery",
+   "sessions": [
+    {
+     "sport": "bike",
+     "title": "80 min easy — after the fit",
+     "priority": "A",
+     "duration": "1:20",
+     "detail": "Do this AFTER the bike fit. RPE 4-5, all in the bars. Feel the new position, change nothing else."
+    }
+   ]
+  },
+  {
+   "date": "2026-08-22",
+   "block": "Block 3 · Recovery",
+   "sessions": [
+    {
+     "sport": "run",
+     "title": "Long run 14 km easy",
+     "priority": "A",
+     "duration": "1:25",
+     "detail": "All easy, no finish effort. That is the point of a recovery week."
+    }
+   ]
+  },
+  {
+   "date": "2026-08-23",
+   "block": "Block 3 · Recovery",
+   "sessions": [
+    {
+     "sport": "bike",
+     "title": "2 h easy",
+     "priority": "B",
+     "duration": "2:00"
+    },
+    {
+     "sport": "run",
+     "title": "Easy run",
+     "priority": "C",
+     "duration": "0:25"
+    }
+   ]
+  },
+  {
+   "date": "2026-08-24",
+   "block": "Block 4 · Peak",
+   "sessions": [
+    {
+     "sport": "swim",
+     "title": "Threshold",
+     "priority": "B",
+     "duration": "1:00",
+     "sets": [
+      "Warm-up: 300 m easy",
+      "6 × 50 m — catch-up drill for the first length, second length normal, starting easy and finishing fast. 20 sec rest",
+      "Main set: 8 × 150 m at her test pace, 25 sec rest",
+      "Skill: 4 × 50 m sighting",
+      "Cool-down: 200 m easy"
+     ]
+    },
+    {
+     "sport": "run",
+     "title": "Easy run",
+     "priority": "C",
+     "duration": "0:45"
+    }
+   ],
+   "note": "Aero helmet should be in use from this week."
+  },
+  {
+   "date": "2026-08-25",
+   "block": "Block 4 · Peak",
+   "sessions": [
+    {
+     "sport": "bike",
+     "title": "Race-effort hour",
+     "priority": "A",
+     "duration": "2:00",
+     "detail": "30 min easy · 60 min continuous at HR 152-158 in the bars · 30 min easy. This is exactly the effort for 17 September."
+    }
+   ]
+  },
+  {
+   "date": "2026-08-26",
+   "block": "Block 4 · Peak",
+   "sessions": [
+    {
+     "sport": "rest",
+     "title": "Rest day",
+     "priority": "A"
+    }
+   ]
+  },
+  {
+   "date": "2026-08-27",
+   "block": "Block 4 · Peak",
+   "sessions": [
+    {
+     "sport": "run",
+     "title": "5 × 1 km at race effort",
+     "priority": "A",
+     "duration": "0:55",
+     "detail": "2 km easy · 5 × 1 km at 4:35/km, 90 sec jog between · 2 km easy"
+    },
+    {
+     "sport": "strength",
+     "title": "Gym",
+     "priority": "C",
+     "duration": "0:45"
+    }
+   ]
+  },
+  {
+   "date": "2026-08-28",
+   "block": "Block 4 · Peak",
+   "sessions": [
+    {
+     "sport": "swim",
+     "title": "Open water",
+     "priority": "B",
+     "duration": "1:00",
+     "detail": "Lake or sea if she can get to one, wetsuit on. Practise beach starts, sighting, and swimming straight without lane ropes.",
+     "sets": [
+      "Pool alternative: 300 m warm-up",
+      "6 × 200 m steady, eyes forward every 6 strokes",
+      "300 m easy"
+     ]
+    }
+   ]
+  },
+  {
+   "date": "2026-08-29",
+   "block": "Block 4 · Peak",
+   "sessions": [
+    {
+     "sport": "run",
+     "title": "Long run 21 km",
+     "priority": "A",
+     "duration": "2:10",
+     "detail": "Longest run of the plan. Steady RPE 5, last 2 km at race effort. Eat on the run."
+    }
+   ]
+  },
+  {
+   "date": "2026-08-30",
+   "block": "Block 4 · Peak",
+   "sessions": [
+    {
+     "sport": "brick",
+     "title": "Full rehearsal",
+     "priority": "A",
+     "duration": "3:30",
+     "detail": "1 km swim + 2:30 bike + 30 min run. Race kit, race nutrition, clock running. Time both transitions. Bike at HR 152-158 in the bars. Run 30 min at 4:40/km."
+    }
+   ]
+  },
+  {
+   "date": "2026-08-31",
+   "block": "Block 5 · Peak 2",
+   "sessions": [
+    {
+     "sport": "swim",
+     "title": "Race pace",
+     "priority": "B",
+     "duration": "1:00",
+     "sets": [
+      "Warm-up: 300 m easy",
+      "Main set: 3 × 600 m at the effort she intends to swim on race day — steady and repeatable, not hard. 45 sec rest",
+      "Cool-down: 300 m easy"
+     ]
+    },
+    {
+     "sport": "run",
+     "title": "Easy run",
+     "priority": "C",
+     "duration": "0:40"
+    }
+   ]
+  },
+  {
+   "date": "2026-09-01",
+   "block": "Block 5 · Peak 2",
+   "sessions": [
+    {
+     "sport": "bike",
+     "title": "90 min easy",
+     "priority": "B",
+     "duration": "1:30",
+     "detail": "RPE 4-5, all in the bars. Legs stay fresh for Thursday."
+    }
+   ]
+  },
+  {
+   "date": "2026-09-02",
+   "block": "Block 5 · Peak 2",
+   "sessions": [
+    {
+     "sport": "rest",
+     "title": "Rest day",
+     "priority": "A"
+    }
+   ]
+  },
+  {
+   "date": "2026-09-03",
+   "block": "Block 5 · Peak 2",
+   "sessions": [
+    {
+     "sport": "brick",
+     "title": "1:45 bike + 5 km run",
+     "priority": "A",
+     "duration": "2:15",
+     "detail": "1:45 ride with 60 min at HR 152-158 in the bars. Straight off: 5 km at 4:35/km. Fast, timed transition."
+    }
+   ]
+  },
+  {
+   "date": "2026-09-04",
+   "block": "Block 5 · Peak 2",
+   "sessions": [
+    {
+     "sport": "swim",
+     "title": "Easy technique",
+     "priority": "C",
+     "duration": "0:50",
+     "sets": [
+      "Warm-up: 300 m easy",
+      "6 × 50 m catch-up drill, 20 sec rest",
+      "400 m steady",
+      "4 × 50 m sighting",
+      "Cool-down: 200 m easy"
+     ]
+    }
+   ]
+  },
+  {
+   "date": "2026-09-05",
+   "block": "Block 5 · Peak 2",
+   "sessions": [
+    {
+     "sport": "run",
+     "title": "Long run 17 km",
+     "priority": "A",
+     "duration": "1:45",
+     "detail": "13 km easy, then 4 km at 4:40/km. Last quality long run."
+    }
+   ]
+  },
+  {
+   "date": "2026-09-06",
+   "block": "Block 5 · Peak 2",
+   "sessions": [
+    {
+     "sport": "bike",
+     "title": "2 h easy",
+     "priority": "B",
+     "duration": "2:00"
+    },
+    {
+     "sport": "run",
+     "title": "Easy run",
+     "priority": "C",
+     "duration": "0:25"
+    }
+   ]
+  },
+  {
+   "date": "2026-09-07",
+   "block": "Block 6 · Taper",
+   "sessions": [
+    {
+     "sport": "swim",
+     "title": "Race week sharpener",
+     "priority": "B",
+     "duration": "0:45",
+     "sets": [
+      "Warm-up: 200 m easy",
+      "4 × 200 m at race effort, 30 sec rest",
+      "4 × 50 m fast, 30 sec rest",
+      "Cool-down: 200 m easy"
+     ]
+    }
+   ],
+   "note": "Volume down 40%. Intensity stays. She will feel restless — that means it is working."
+  },
+  {
+   "date": "2026-09-08",
+   "block": "Block 6 · Taper",
+   "sessions": [
+    {
+     "sport": "run",
+     "title": "4 × 1 km at race effort",
+     "priority": "A",
+     "duration": "0:50",
+     "detail": "2 km easy · 4 × 1 km at 4:35/km, 90 sec jog · 2 km easy"
+    }
+   ]
+  },
+  {
+   "date": "2026-09-09",
+   "block": "Block 6 · Taper",
+   "sessions": [
+    {
+     "sport": "rest",
+     "title": "Rest day",
+     "priority": "A"
+    }
+   ]
+  },
+  {
+   "date": "2026-09-10",
+   "block": "Block 6 · Taper",
+   "sessions": [
+    {
+     "sport": "bike",
+     "title": "75 min with sharpeners",
+     "priority": "B",
+     "duration": "1:15",
+     "detail": "In the bars throughout. 4 × 3 min at race effort, everything else easy."
+    }
+   ]
+  },
+  {
+   "date": "2026-09-11",
+   "block": "Block 6 · Taper",
+   "sessions": [
+    {
+     "sport": "swim",
+     "title": "Easy",
+     "priority": "C",
+     "duration": "0:40",
+     "sets": [
+      "Warm-up: 300 m easy",
+      "6 × 100 m relaxed, eyes forward every 6 strokes",
+      "Cool-down: 200 m easy. Feel good, do no work."
+     ]
+    }
+   ]
+  },
+  {
+   "date": "2026-09-12",
+   "block": "Block 6 · Taper",
+   "sessions": [
+    {
+     "sport": "run",
+     "title": "10 km, last 2 at race effort",
+     "priority": "A",
+     "duration": "1:00"
+    }
+   ]
+  },
+  {
+   "date": "2026-09-13",
+   "block": "Block 6 · Taper",
+   "sessions": [
+    {
+     "sport": "bike",
+     "title": "90 min easy",
+     "priority": "B",
+     "duration": "1:30",
+     "detail": "Last real ride. Then check the bike over: tyres, brakes, bolts, gears."
+    },
+    {
+     "sport": "run",
+     "title": "Easy run",
+     "priority": "C",
+     "duration": "0:20"
+    }
+   ]
+  },
+  {
+   "date": "2026-09-14",
+   "block": "Block 7 · Race week",
+   "sessions": [
+    {
+     "sport": "swim",
+     "title": "Activation",
+     "priority": "B",
+     "duration": "0:35",
+     "sets": [
+      "Warm-up: 200 m easy",
+      "6 × 100 m, each a little faster, finishing at race effort. 30 sec rest",
+      "Cool-down: 200 m easy"
+     ]
+    }
+   ]
+  },
+  {
+   "date": "2026-09-15",
+   "block": "Block 7 · Race week",
+   "sessions": [
+    {
+     "sport": "run",
+     "title": "Activation",
+     "priority": "A",
+     "duration": "0:30",
+     "detail": "20 min easy with 4 × 30 sec at race effort."
+    }
+   ],
+   "note": "Travel day. Pack: race kit, wetsuit, aero helmet, nutrition, spares, timing chip."
+  },
+  {
+   "date": "2026-09-16",
+   "block": "Block 7 · Race week",
+   "sessions": [
+    {
+     "sport": "bike",
+     "title": "Activation + walk the transitions",
+     "priority": "A",
+     "duration": "0:30",
+     "detail": "20-30 min easy spin, 3 × 1 min at race effort, check every gear. Then WALK both transitions: swim exit to bike, bike in to run out. Count the racks."
+    }
+   ]
+  },
+  {
+   "date": "2026-09-17",
+   "block": "Block 7 · Race week",
+   "sessions": [
+    {
+     "sport": "race",
+     "title": "IRONMAN 70.3 CERVIA",
+     "priority": "A",
+     "detail": "Race day."
+    }
+   ]
+  }
+ ]
+}
