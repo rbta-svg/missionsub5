@@ -2,7 +2,7 @@
 
 Training dashboard and race analysis for Ironman 70.3 Emilia-Romagna, Cervia, 17 September 2026.
 
-**Target 5:02:55.** Personal best 5:22:59 (same course, 2025).
+**Target 4:59:45.** Personal best 5:22:59 (same course, 2025).
 
 ## The dashboard
 
@@ -29,11 +29,15 @@ When served over http the page prefers the live `data/plan.json`; opened from di
 
 ## Deploying
 
-Push to `main` and the GitHub Action publishes to GitHub Pages.
+**One-time setup, required before the first run:**
 
-One-time setup: **Settings → Pages → Source: GitHub Actions.**
+Repository → **Settings → Pages → Build and deployment → Source: GitHub Actions** → Save.
 
-The workflow validates `data/plan.json` before deploying, so a malformed plan fails the build rather than the page.
+Without this the workflow fails with `Get Pages site failed … Not Found`. The action cannot enable Pages itself — its `enablement` option needs a personal access token rather than the default `GITHUB_TOKEN`.
+
+Then push to `main`, or run the workflow manually from the Actions tab. It bakes `data/plan.json` into `index.html` and publishes.
+
+> **Note the date.** `configure-pages`, `upload-pages-artifact` and `deploy-pages` still run on Node 20, which GitHub removes from runners on **16 September 2026 — the day before the race.** Until then it is only a warning. Check for newer major versions in early September and bump them. If the deploy ever breaks, `index.html` still works offline, so nothing is lost on race day.
 
 > **Privacy.** GitHub Pages is public, and this dashboard carries a named athlete's training and race data. If that isn't wanted, use a **private repo with GitHub Pages on a paid plan**, or remove the name from `data/plan.json` and `index.html`. The `.gitignore` already excludes all raw health data — `raw/`, every `.FIT` file, and every per-session CSV. Check `git status` before the first push.
 

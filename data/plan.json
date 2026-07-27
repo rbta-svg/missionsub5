@@ -4,35 +4,42 @@
   "name": "Ironman 70.3 Emilia-Romagna",
   "location": "Cervia, Italy",
   "date": "2026-09-17",
-  "target": "5:02:55",
+  "target": "4:59:45",
   "pb": "5:22:59",
   "pb_year": 2025,
   "splits": [
    {
     "leg": "Swim 1.9 km",
-    "time": "38:30",
-    "note": "Start wide, sight every six strokes"
+    "time": "38:00",
+    "note": "2:00/100m — her Karlsfelder open-water pace. Only holds if she swims straight."
    },
    {
     "leg": "T1",
-    "time": "5:00",
-    "note": "Long run in from the beach"
+    "time": "4:45",
+    "note": "Long run in from the beach. Walked yesterday, so no hesitation."
    },
    {
     "leg": "Bike 90 km",
-    "time": "2:37:00",
-    "note": "HR 152-158. In the bars. Do not chase Bertinoro."
+    "time": "2:36:30",
+    "note": "34.5 km/h, HR 155-160. In the bars. Do not chase Bertinoro."
    },
    {
     "leg": "T2",
-    "time": "3:45",
-    "note": ""
+    "time": "3:30",
+    "note": "Shoes, hat, go."
    },
    {
     "leg": "Run 21.1 km",
-    "time": "1:38:30",
-    "note": "First 3 km at 4:45, then 4:40/km"
+    "time": "1:37:00",
+    "note": "4:40/km for 3 km, then 4:36/km. This is where sub-5 is won."
    }
+  ],
+  "what_must_be_true": [
+   "Run 4:36/km for 21.1 km off the bike. She ran 4:26/km for 9.8 km off a 45 km bike at Karlsfelder — this asks for 10 s/km slower over double the distance.",
+   "Bike 34.5 km/h at HR 155-160, which is below the 168 she held at Karlsfelder.",
+   "Transitions 8:15 combined on a course where the winner took 8:00. She did 4:36 at Karlsfelder.",
+   "Swim straight. 2:00/100m is her real open-water pace; swimming wide is what costs the minute.",
+   "Aero helmet and bike fit both done by late August."
   ]
  },
  "priorities": {
@@ -232,7 +239,7 @@
      "title": "Long run 16 km",
      "priority": "A",
      "duration": "1:40",
-     "detail": "13 km easy, then 3 km at 4:40/km."
+     "detail": "12 km easy, then 4 km at 4:36/km."
     }
    ]
   },
@@ -348,7 +355,7 @@
      "title": "Long run 18 km",
      "priority": "A",
      "duration": "1:55",
-     "detail": "15 km easy, then 3 km at 4:40/km."
+     "detail": "13 km easy, then 5 km at 4:36/km."
     }
    ]
   },
@@ -361,7 +368,7 @@
      "title": "2 h bike + 20 min run",
      "priority": "A",
      "duration": "2:30",
-     "detail": "2 h ride, 90 min continuous in the bars at HR 150-156. Straight off: 20 min at 4:40/km. Practise the shoe change."
+     "detail": "2 h ride, 90 min continuous in the bars at HR 152-158. Then a FULL timed T2: helmet off, shoes changed, running — target under 2 min. Then 20 min at 4:36/km."
     }
    ]
   },
@@ -497,7 +504,7 @@
      "title": "Race-effort hour",
      "priority": "A",
      "duration": "2:00",
-     "detail": "30 min easy · 60 min continuous at HR 152-158 in the bars · 30 min easy. This is exactly the effort for 17 September."
+     "detail": "30 min easy · 60 min continuous at HR 155-160 in the bars · 30 min easy. This is exactly the effort for 17 September."
     }
    ]
   },
@@ -521,7 +528,7 @@
      "title": "5 × 1 km at race effort",
      "priority": "A",
      "duration": "0:55",
-     "detail": "2 km easy · 5 × 1 km at 4:35/km, 90 sec jog between · 2 km easy"
+     "detail": "2 km easy · 5 × 1 km at 4:28/km, 90 sec jog between · 2 km easy"
     },
     {
      "sport": "strength",
@@ -540,7 +547,7 @@
      "title": "Open water",
      "priority": "B",
      "duration": "1:00",
-     "detail": "Lake or sea if she can get to one, wetsuit on. Practise beach starts, sighting, and swimming straight without lane ropes.",
+     "detail": "Lake or sea if she can get to one, wetsuit on. Beach starts, sighting, swimming straight. The 38:00 swim split assumes she does not swim wide — this session is what protects it.",
      "sets": [
       "Pool alternative: 300 m warm-up",
       "6 × 200 m steady, eyes forward every 6 strokes",
@@ -558,7 +565,7 @@
      "title": "Long run 21 km",
      "priority": "A",
      "duration": "2:10",
-     "detail": "Longest run of the plan. Steady RPE 5, last 2 km at race effort. Eat on the run."
+     "detail": "Longest run of the plan. 15 km steady, then 6 km at 4:36/km. Eat on the run — this is the race-day rehearsal for the run leg."
     }
    ]
   },
@@ -571,7 +578,7 @@
      "title": "Full rehearsal",
      "priority": "A",
      "duration": "3:30",
-     "detail": "1 km swim + 2:30 bike + 30 min run. Race kit, race nutrition, clock running. Time both transitions. Bike at HR 152-158 in the bars. Run 30 min at 4:40/km."
+     "detail": "1 km swim + 2:30 bike + 40 min run. Race kit, race nutrition, clock running. Time both transitions. Bike at HR 155-160 in the bars. Run 40 min at 4:36/km — longer than before, because the run is now the target."
     }
    ]
   },
@@ -631,7 +638,7 @@
      "title": "1:45 bike + 5 km run",
      "priority": "A",
      "duration": "2:15",
-     "detail": "1:45 ride with 60 min at HR 152-158 in the bars. Straight off: 5 km at 4:35/km. Fast, timed transition."
+     "detail": "1:45 ride with 60 min at HR 155-160 in the bars. Timed T2 under 2 min. Then 5 km at 4:28/km."
     }
    ]
   },
@@ -663,7 +670,7 @@
      "title": "Long run 17 km",
      "priority": "A",
      "duration": "1:45",
-     "detail": "13 km easy, then 4 km at 4:40/km. Last quality long run."
+     "detail": "11 km easy, then 6 km at 4:36/km. Last quality long run."
     }
    ]
   },
@@ -713,7 +720,7 @@
      "title": "4 × 1 km at race effort",
      "priority": "A",
      "duration": "0:50",
-     "detail": "2 km easy · 4 × 1 km at 4:35/km, 90 sec jog · 2 km easy"
+     "detail": "2 km easy · 4 × 1 km at 4:28/km, 90 sec jog · 2 km easy"
     }
    ]
   },

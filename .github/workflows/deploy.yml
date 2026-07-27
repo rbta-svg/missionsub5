@@ -21,7 +21,7 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - name: Bake plan into index.html
         run: python3 build.py
@@ -32,7 +32,15 @@ jobs:
           cp index.html _site/
           cp data/plan.json _site/data/
 
+      # Requires Pages to be enabled first:
+      # Settings -> Pages -> Build and deployment -> Source: GitHub Actions
+      # The `enablement: true` option cannot do this for us — it needs a PAT,
+      # not the default GITHUB_TOKEN.
       - uses: actions/configure-pages@v5
+
+      # These three still run on Node 20, which GitHub removes from runners on
+      # 16 September 2026 — the day before the race. Check for newer major
+      # versions in early September and bump them.
       - uses: actions/upload-pages-artifact@v3
         with:
           path: _site

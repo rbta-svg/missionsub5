@@ -68,17 +68,45 @@ Back-solving the Karlsfelder bike leg: roughly **210 W for 77 minutes at HR 168*
 
 **Transitions: T1 1:48, T2 2:48 — 4:36 combined.** She can transition perfectly well. Cervia's 11:46 was the course, not the athlete. Target 8:30, close to the winner's 8:00 floor.
 
-## The target
+## The target — 4:59:45
 
-Bike at IF 0.80 on the helmet-and-fit package: **34.4 km/h, 2:37:07.**
+| Leg | Target | 2025 | Gain |
+|---|---|---|---|
+| Swim 1.9 km | **38:00** (2:00/100m) | 40:06 | −2:06 |
+| T1 | **4:45** | 6:01 | −1:16 |
+| Bike 90 km | **2:36:30** (34.5 km/h) | 2:40:02 | −3:32 |
+| T2 | **3:30** | 5:45 | −2:15 |
+| Run 21.1 km | **1:37:00** (4:36/km) | 1:51:00 | **−14:00** |
+| **Total** | **4:59:45** | 5:22:59 | **−23:14** |
 
-| Scenario | Swim | T | Bike | Run | **Total** |
-|---|---|---|---|---|---|
-| Conservative | 39:30 | 9:15 | 2:37:07 | 4:45 /km | **5:06:06** |
-| **Target** | 38:30 | 8:45 | 2:37:07 | 4:40 /km | **5:02:55** |
-| Good day | 38:00 | 8:15 | 2:37:07 | 4:34 /km | **5:00:01** |
+Sub-5, by fifteen seconds. Nothing here is invented — every number traces to something she has already done.
 
-A 20-minute personal best is the central case. **Sub-5 sits exactly on the line** — it needs the good-day column and nothing to go wrong.
+### Where the 3:10 came from
+
+Against the previous 5:02:55, the shaving is deliberately lopsided:
+
+- **Run −1:32.** 4:40 → 4:36/km. The largest slice, and the only one that is genuinely trainable in six weeks.
+- **Bike −37s.** 34.4 → 34.5 km/h, moving from IF 0.80 to 0.81. Trivial, and below the Karlsfelder effort.
+- **Swim −30s.** 38:30 → 38:00, which is exactly her Karlsfelder open-water pace of 2:00/100m.
+- **Transitions −30s.** 8:45 → 8:15, against a winner's 8:00 and her own 4:36 at Karlsfelder.
+
+I resisted taking more from the bike. The intensity curve is flat — pushing the bike harder buys minutes on paper and gives them back on the run, with a fat downside tail if it goes wrong. The run is where sub-5 is actually won.
+
+### What has to be true
+
+**Run 4:36/km for 21.1 km off the bike.** She ran 4:26/km for 9.8 km off a 45 km bike at Karlsfelder, at HR 173. This asks for 10 s/km slower over double the distance off double the bike. Demanding, not fanciful — and it is exactly what the long-run block is for.
+
+**Bike 34.5 km/h at HR 155-160.** Below the 168 she held for 77 minutes at Karlsfelder. The speed comes from the aero package, not from working harder.
+
+**Transitions 8:15.** On a course where the winner took 8:00 — but she did 4:36 at Karlsfelder, so the skill is there. This is about knowing the route, not moving faster.
+
+**A straight swim.** 2:00/100m is her real pace. Swimming wide is what costs the minute, which is why open-water sighting is now a protected session.
+
+**Helmet bought and fit done by late August.** Without them the bike is 2:40 and the target is gone.
+
+### The plan changed to earn it
+
+Race-pace volume inside the long runs roughly doubled: 4 km, then 5, then **6 km at 4:36/km** inside the 21 km. Interval pace dropped from 4:35 to 4:28/km. The full rehearsal run went from 30 to 40 minutes. Both bricks now finish with a **timed T2 under two minutes**, because transitions cannot be drilled for the first time in race week.
 
 ## Two open problems
 
